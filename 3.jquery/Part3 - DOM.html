@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+	<meta charset = "UTF-8" >
+	<title >Title</title >
+	<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous">
+
+	</script>
+	<style >
+		.myClass {
+			color: deepskyblue;
+			background: black;
+		}
+	</style >
+</head >
+<body >
+	<header>
+		<h1>query</h1>
+	</header>
+	<div id="container">
+		<button id="btn1">Button 1</button>
+		<p class="par1">This is paragraph</p>
+		<p class="par2">Onother paragraph</p>
+		<div id="myDiv"></div>
+		<input type = "text" id="newitem">
+		<ul>
+			<li>List Item1</li>
+			<li>List Item1</li>
+			<li>List Item1</li>
+			<li>List Item1</li>
+			<li>List Item1</li>
+		</ul>
+		<a href = "http://google.com" >Google</a >
+		<ul id="users">
+
+		</ul>
+	</div>
+
+	<script >
+		$(document).ready(function() {
+
+				$('p.par1').css('color', 'red');
+				$('p.par1').css({color:'red', background:'#ccc'});
+				$('p.par2').addClass('myClass');
+				$('p.par2').removeClass('myClass');
+					$('#btn1').click(function() {
+						$('p.par1').toggleClass['myClass'];
+					});
+				
+					// $('#myDiv').html('Hello world');
+					// alert($('#myDiv').text());
+					$('ul').append('<li >Append List</li >');
+					$('ul').prepend('<li >prepend list</li >');
+					$('.par1').appendTo('.par2');
+					$('.par1').prependto('par2');
+					$('ul').before('<h4>hello</h4>');
+					$('ul').after('<h4>world</h4>');
+					$('ul').empty();
+					$('a').attr('target', '_blank');
+					alert($('').attr('href'));
+					$('a').removeAttr('target');
+				});
+
+				$('p').wrapAll('<h1>'); //wrap
+				$('#newitem').keyup(function (e) {
+					let code = e.which;
+					if (code === 13) {
+					    e.preventDefault();
+						$('ul').append('<li>' +e.target.value +'</li>');
+					}
+				});
+				let myarr = ['john', 'kim', 'lola'];
+				$.each(myarr, function (i,v) {
+					$('#users').append('<li>' + v + '</li>');
+				})
+			let newArr = $('ul');
+		});
+	</script >
+</body >
+</html >

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+	<meta charset = "UTF-8" >
+	<title >Title</title >
+	<style >
+		#box {
+			background: darkgray;
+			color: white;
+			width: 500px;
+			height: 90px;
+			padding: 40px;
+			text-align: center;
+		}
+		#box2 {
+			background: dodgerblue;
+			width: 100px;
+			height: 100px;
+			position: relative;
+		}
+	</style >
+	<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+</head >
+<body >
+	<div id="container">
+		<button id="btnfadeOut">Fade Out</button>
+		<button id="btnfadeIn">Fade In</button>
+		<button id="btnfadeTogg">Fade Toggle</button>
+
+		<hr >
+
+		<button id="btnSlideUp">Slide Up</button>
+		<button id="btnSlideDown">Slide Down</button>
+		<button id="btnSlideTogg">Slide Toggle</button>
+		<button id="btnStop">Stop</button>
+		<hr >
+		<div id="box">
+			<h1>Hello  wORLD</h1>
+		</div>
+		<hr >
+		<button id="moveLeft">Move Left</button>
+		<button id="moveRight">Move Right</button>
+		<button id="moveAround">Move Around</button>
+		<div id="box2">
+
+		</div>
+	</div>
+
+	<script >
+		$(document).ready(function() {
+			$('#btnfadeOut').click(function() {
+				$('#box').fadeOut(2000, function() {
+					$('#btnfadeOut').text('Faded Out');
+				});
+			});
+			$('#btnfadeIn').click(function() {
+			    $('#box').fadeIn(2000, function() {
+			       $('#btnfadeIn').text('Faded In');
+			    });
+			});
+			$('#btnfadeTogg').click(function() {
+				$('#box').fadeToggle(1000);
+			});
+
+			 $('#btnSlideDown').click(function() {
+				$('#box').slideDown(2000)
+			 });
+			 $('#btnSlideUp').click(function() {
+				$('#box').slideUp(2000)
+			 });
+			 $('#btnSlideTogg').click(function() {
+				$('#box').slideToggle(2000)
+			 });
+			 $('#btnStop').click(function() {
+				$('#box').stop();
+			 });
+
+			 $('#moveRight').click(function() {
+				$('#box2').animate({
+				  left: 500,
+				  height: '300px',
+				  width: '300px',
+				  opacity: '0.5'
+				});
+			 });
+			 $('#moveLeft').click(function() {
+				$('#box2').animate({
+				  left: 0,
+				  height: '100px',
+				  width: '100px',
+				  opacity: '1'
+				});
+			 });
+
+			 $('#moveAround').click(function() {
+				let box = $('#box2');
+				box.animate({
+				  left: 300,
+				});
+			    box.animate({
+			       top: 300,
+			    });
+			    box.animate({
+			       left: 0,
+			       top: 300,
+			    });
+			    box.animate({
+			       left: 0,
+			       top: 0
+			    });
+			 });
+		});
+	</script >
+</body >
+</html >

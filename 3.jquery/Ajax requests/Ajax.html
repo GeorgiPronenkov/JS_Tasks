@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+	<meta charset = "UTF-8" >
+	<title >Title</title >
+	<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous"></script>
+</head >
+<body >
+	<div id="container">
+		<div id="result">
+			<ul id="users"></ul>
+			<h3>Add Post</h3>
+			<form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+				<input type = "text" id="title" placeholder="Title">
+				<br >
+				<textarea cols = "39" rows = "10" placeholder="Body" id="body"></textarea >
+				<br >
+				<input type = "submit" value="Submit">
+			</form >
+		</div>
+	</div>
+	<script >
+		$(document).ready(function() {
+
+			$('#result').load('test.html', function(responseTxt, statusTxt, xhr) {
+				if (statusTxt === 'succsess') {
+				    alert('It went fine');
+				} else if (statusTxt === 'error') {
+				    alert('Error: ' + xhr.statusText);
+				}
+			});
+
+		    $.get('test.html', function(data) {
+				$('#result').html(data);
+		    });
+
+		    $.getJSON('users.json', function(data) {
+				$.each(data, function(i, user) {
+					$('ul#users').append('<li>' + user.firstName + '</li>');
+				})
+		    })
+
+		    $.ajax({
+		      method: 'GET',
+		      url: 'https://jsonplaceholder.typicode.com/posts',
+		      dataType: 'json'
+		    }).done(function(data) {
+		       console.log(data);
+		       $.map(data, function(post) {
+				  $('#result').append('<h3>' + post.title + '</h3><p>'+post.body+'</p>');
+		       })
+		    });
+
+
+		    $('#postForm').submit(function(e) {
+
+				e.preventDefault();
+
+				let title = $('#title').val();
+				let body = $('#body').val();
+				let url = $(this).attr('action');
+
+				$.post(url, {title:title, body:body})
+				    .done(function(data) {
+				      console.log('Post Saved');
+				      console.log(data);
+				});
+		    });
+		});
+	</script>
+</body>
+</html>

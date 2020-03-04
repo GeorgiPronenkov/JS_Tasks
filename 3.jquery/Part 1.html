@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+	<meta charset = "UTF-8" >
+	<title >Title</title >
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+
+	</script>
+</head >
+<body >
+	<header>
+		<h1>jquery course</h1>
+	</header>
+	<div id="container">
+		<h1 id="heading1">Heading one</h1>
+		<p id="par1">
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <span>Jonh Doe caption</span> including versions of Lorem Ipsum.
+	</p>
+		<h1 id="heading2">Heading two</h1>
+		<p id="par2">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like <span>Jonh Doe caption</span> including versions of Lorem Ipsum.
+		</p>
+		<ul id = "list" >
+			<li >List Item</li >
+			<li >List Item</li >
+			<li >List Item</li >
+			<li >List Item</li >
+			<li >List Item</li >
+		</ul >
+		<input type = "button" value="Button1">
+		<input type = "submit" value="Button2">
+		<input type = "text" >
+
+		<a href = "http://google.com" >Google</a >
+		<a href = "http://yahoo.com" >Yahoo</a >
+	</div>
+	<script >
+		//$('h1').hide();
+		//$('h1#heading1').hide();
+		//$('p span').css('color', 'red');
+		//$('ul#list li:first').css('color', 'blue'); //li:last
+		$('ul#list li:even').css('background-color', 'yellow');
+		$('ul#list li:odd').css('background-color', 'red');
+		$('ul#list li:nth-child(3n)').css('list-style-type', 'square');
+		$(':text').hide();
+		$('[href]').css('color', 'purple');
+		$('a[href="http://yahoo.com"]').css('color', 'green');
+	</script >
+</body >
+</html >
