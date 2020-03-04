@@ -1,0 +1,66 @@
+<!--Write a JS program that takes an e-mail from an input field and deletes matching rows from a table.
+If no entry is found, an error should be displayed in a <div> with ID "results".
+The error should read "Not found." -->
+
+<!DOCTYPE html>
+<html lang = "en" >
+<head >
+	<meta charset = "UTF-8" >
+	<title >Title</title >
+</head >
+<body >
+	<table border="1" id="customers">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+		</tr>
+		<tr>
+			<td>Eve</td>
+			<td>eve@gmail.com</td>
+		</tr>
+		<tr>
+			<td>Nick</td>
+			<td>nick@yahooo.com</td>
+		</tr>
+		<tr>
+			<td>Didi</td>
+			<td>didi@didi.net</td>
+		</tr>
+		<tr>
+			<td>Tedy</td>
+			<td>tedy@tedy.com</td>
+		</tr>
+	</table>
+	Email: <input type="text" name="email" />
+	<button onclick="deleteByEmail()">Delete</button>
+	<div id="result">
+
+	</div >
+
+	<script >
+		function deleteByEmail() {
+
+			let resultEl = document.getElementById('result');
+			let inputEmail = document.getElementsByName('email')[0].value;
+			let tableRows = document.querySelectorAll('table tr');
+
+			let hasDeleted = false;
+			for (let i = 1; i < tableRows.length; i++) {
+				let currentRow = tableRows[i];
+				let currentEmail = currentRow.children[1].textContent;
+
+				if (currentEmail === inputEmail) {
+				    currentRow.parentNode.removeChild(currentRow);
+				    hasDeleted = true;
+				    resultEl.textContent = 'Deleted.'
+				}
+			}
+
+			if (!hasDeleted) {
+			    resultEl.textContent = 'Not Found!';
+			}
+		}
+	</script >
+
+</body >
+</html >

@@ -1,0 +1,29 @@
+.prev-month, .next-month {
+		color: darkorange;
+}
+.today {
+		font-weight: bold;
+		color: white;
+		background: red;
+}
+.title {
+		background: #AAAAFF;
+		margin: 10px 0;
+		padding:5px
+}
+table {
+		border: 3px solid darkblue;
+}
+td {
+		text-align: center;
+}
+#calendarCode {
+		width: 100%;
+}
+.btn{
+		font-size: large;
+		padding: 6px;
+		background: red;
+		color: white;
+		border-radius: 30%;
+}
