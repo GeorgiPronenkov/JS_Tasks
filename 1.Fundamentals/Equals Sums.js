@@ -8,11 +8,12 @@
 function solve(array) {
 
    let indexOfElement = -1;  // когато елемента не същ. в масива
+
    for (let i = 0; i < array.length; i++) {
       let leftSum =  0;
       let rightSum = 0;
 
-      for (let j = i - 1; j >=0 ; j--) { //от ляво на елемнта
+      for (let j = i - 1; j >=0 ; j--) { //от ляво на елемeнта
          leftSum += array[j];
       }
 

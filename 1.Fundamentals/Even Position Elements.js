@@ -1,4 +1,4 @@
-function evenposition(arr) {
+function evenPosition(arr) {
 
 	let resultArr = [];
 	// for (let i = 0; i < arr.length; i++) {
@@ -14,4 +14,4 @@ function evenposition(arr) {
 	}
 	console.log(resultArr.join(', '));
 }
-evenposition(['35', '60', '70', '88', '90', '100', '230']);
+evenPosition(['35', '60', '70', '88', '90', '100', '230']);

@@ -1,6 +1,7 @@
 function attachEventsListeners() {
 	
-	document.getElementById('convert').addEventListener('click', convert);
+	document.getElementById('convert')
+			.addEventListener('click', convert);
 	let ratesInMeters = {
 		'km': 1000,
 		'm': 1,
@@ -13,6 +14,7 @@ function attachEventsListeners() {
 	};
 	
 	function convert() {
+
 		let input = Number(document.getElementById('inputDistance').value);
 		let inputUnits = document.getElementById('inputUnits').value;
 		let outUnits = document.getElementById('outputUnits').value;

@@ -26,6 +26,7 @@ function validate() {
 		ev.preventDefault();
 
 		validateForm();
+
 		validationDiv.css('display', allIsValid ? 'block' : 'none');
 		allIsValid = true;
 	});

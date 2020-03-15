@@ -8,9 +8,9 @@ function attachEvents() {
 						.filter((index, el) => $(el)
 						.text() === town)
 						.each(function (index,el) {
-						deleted = true;
-						$(el).remove();
-		});
+							deleted = true;
+							$(el).remove();
+						});
 
 		resultDiv.text(deleted ? `${town} deleted.` : `${town} not found`);
 	});

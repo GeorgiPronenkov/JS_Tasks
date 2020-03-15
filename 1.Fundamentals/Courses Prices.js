@@ -30,6 +30,7 @@ function solve(Fundamentals, Advanced, Applications, form) {
        'JS Advanced' : 180,
        'JS Application' :190
    };
+
    let total = 0;
 
    if (Fundamentals) {

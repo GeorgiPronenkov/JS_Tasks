@@ -22,9 +22,9 @@ function initializeTable() {
                                        <td>${capital}</td>`);
             row.append(countryAndCapital);
             let actions = $('<td>')
-                                .append($('<a href="#">[Up]</a>').click(moveUp))
-                                .append($('<a href="#">[Down]</a>').click(moveDown))
-                                .append($('<a href="#">[Delete]</a>').click(deleteRow));
+                          .append($('<a href="#">[Up]</a>').click(moveUp))
+                          .append($('<a href="#">[Down]</a>').click(moveDown))
+                          .append($('<a href="#">[Delete]</a>').click(deleteRow));
 
             row.append(countryAndCapital);
             row.append(actions);
