@@ -21,7 +21,6 @@
 */
 
 function solve(arr) {
-
     let totalMoney = 0;
     for (let i = 0; i < arr.length; i++) {
         let tokens = arr[i].split(', ');

@@ -26,7 +26,6 @@
 */
 
 function solve(inputText) {
-    
    const isUpperCase = (symbol) => {
      return symbol === symbol.toUpperCase();  
    };

@@ -76,8 +76,8 @@ let manager = (function () {
                 return prepareRecipe(args[1], Number(args[2]));
             case 'report':
                 return Object.entries(ingredientObj)
-                        .map((kvp) => `${kvp[0]}=${kvp[1]}`)
-                        .join(' ');
+                             .map((kvp) => `${kvp[0]}=${kvp[1]}`)
+                             .join(' ');
         }
    }
 })();

@@ -33,7 +33,6 @@
 */
 
 function solve(input) {
-
     //inputs
     let days = Number(input.shift());
     let playersCount = Number(input.shift());
