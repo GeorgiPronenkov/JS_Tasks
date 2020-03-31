@@ -1,11 +1,9 @@
 function initializeTable() {
-
     $('#createLink').on('click', addCountry);
 
     fixLinks();
 
     function addCountry() {  //вземаме ст-те на country and capital
-
         let country = $('#newCountryText').val();
         let capital = $('#newCapitalText').val();
 
@@ -15,7 +13,6 @@ function initializeTable() {
     }
 
         function createCountry(country, capital) {
-
             let table = $('#countriesTable');
             let row = $('<tr>');
             let countryAndCapital = $(`<td>${country}</td>
@@ -53,7 +50,6 @@ function initializeTable() {
         }
 
         function fixLinks() {
-
         $('a').show();
         $('#countriesTable tr:nth-child(3) td:nth-child(3) a:first-child').hide(); //вземаме 3-и ред и на 3-та клетка 1-во полe
         $('#countriesTable tr:last-child td:nth-child(3) a:nth-child(2)').hide();

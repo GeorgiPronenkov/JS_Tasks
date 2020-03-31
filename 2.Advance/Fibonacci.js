@@ -1,10 +1,8 @@
 function getFibonator() {
-
   let prevElem = 0;
   let current = 1;
 
   return function () {
-
     const result = prevElem + current;
     prevElem = current;
     current  = result;

@@ -1,5 +1,4 @@
 function attachEvents() {
-
 	let resultDiv = $('#result');
 	$('#btnDelete').on('click', function () {
 		let deleted = false;

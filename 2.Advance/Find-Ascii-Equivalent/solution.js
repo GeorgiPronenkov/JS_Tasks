@@ -1,5 +1,4 @@
 function solve() {
-
     const text = document.getElementById("text")
                          .value; //взема Input-a
     const parts = text.split(' '); //взема думите

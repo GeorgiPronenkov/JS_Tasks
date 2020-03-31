@@ -1,5 +1,4 @@
 function calendar(inputArr) {
-
 	let [day, month, year] = inputArr.map(Number);
 	let html = '<table>\n';
 	html += '<tr>' +

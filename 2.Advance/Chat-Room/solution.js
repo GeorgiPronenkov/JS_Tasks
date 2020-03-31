@@ -1,5 +1,4 @@
 function solve() {
-    
     let targetDiv = document.getElementsByClassName('my-message')[0];
     let sendBtn = document.getElementById('send');
     let textArea = document.getElementById('chat_input');
