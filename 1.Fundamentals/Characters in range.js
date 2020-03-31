@@ -4,7 +4,6 @@
 */
 
 function solve(char1, char2) {
-
    let code1 = char1.charCodeAt(0);
    let code2 = char2.charCodeAt(0);
 
