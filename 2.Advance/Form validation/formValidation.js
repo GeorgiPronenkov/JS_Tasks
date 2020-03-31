@@ -1,5 +1,4 @@
 function validate() {
-
 	let username = $('#username');
 	let email = $('#email');
 	let password = $('#password');
@@ -22,7 +21,6 @@ function validate() {
 
 	//submit button
 	submitBtn.on('click', function (ev) {
-
 		ev.preventDefault();
 
 		validateForm();
@@ -33,7 +31,6 @@ function validate() {
 
 	//validate
 	function validateForm() {
-
 		validateInputWithRegEx(username, /^[A-Za-z\d]{3,20}$/g);
 		validateInputWithRegEx(email, /^.*?@.*?\..*$/g);
 		if (confirmPassword.val() === password.val()) {

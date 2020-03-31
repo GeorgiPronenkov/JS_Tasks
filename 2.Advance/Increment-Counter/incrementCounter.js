@@ -15,13 +15,11 @@ When the [Increment] is clicked the value of the textarea should go up by one (i
 */
 
 function increment(selector) {
-
 	//get the selector as html element because it is a string now
 	let parent = $(`${selector}`);
 
 	//creating elements
 	(function createElements() {
-
 		let textarea = $(`<textarea>`);
 		textarea.addClass('counter');
 		textarea.val(0);

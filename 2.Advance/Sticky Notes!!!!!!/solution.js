@@ -1,5 +1,4 @@
 function addSticker() {
-
 	//getting inputs
 	let $title = $('.title');
 	let $content = $('.content');
@@ -12,7 +11,6 @@ function addSticker() {
 	}
 
 	function createNote() {
-
 		let $li = $('<li>');
 		$li.addClass('note-content');
 

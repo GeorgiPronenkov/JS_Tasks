@@ -1,5 +1,4 @@
 function realEstateAgency () {
-
 	$('button[name="regOffer"]').on('click', regOffer);
 	$('button[name="findOffer"]').on('click', findOffer);
 
@@ -7,7 +6,6 @@ function realEstateAgency () {
 	let $building = $('#building');
 
 	function regOffer() {
-
 		let $rentInput = $('input[name="apartmentRent"]');
 		let $apartment = $('input[name="apartmentType"]');
 		let $commissionInput = $('input[name="agencyCommission"]');
@@ -40,7 +38,6 @@ function realEstateAgency () {
 	}
 
 	function createHTMLElement(type, text, className) {
-
 		let element = $(`<${type}></${type}>`);
 		if (text) {
 		    element.text(text);
@@ -52,7 +49,6 @@ function realEstateAgency () {
 	}
 
 	function findOffer() {
-
 		let $familyBudget = $('input[name="familyBudget"]');
 		let $familyApartmentType = $('input[name="familyApartmentType"]');
 		let $familyName = $('input[name="familyName"]');

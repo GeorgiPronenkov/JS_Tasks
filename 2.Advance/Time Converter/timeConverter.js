@@ -1,5 +1,4 @@
 function attachEventsListeners() {
-
 	let $days = $('#days');
 	let $hours = $('#hours');
 	let $minutes = $('#minutes');
@@ -7,7 +6,8 @@ function attachEventsListeners() {
 
 	//get buttons
 	$('input[type="button"]').on('click', function () {
-		let unit = $(this).attr('id').replace('Btn', '');
+		let unit = $(this).attr('id')
+						  .replace('Btn', '');
 
 		switch(unit) {
 			case 'days':

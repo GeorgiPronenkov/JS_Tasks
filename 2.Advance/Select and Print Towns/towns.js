@@ -1,5 +1,4 @@
 function move(direction) {
-
 	if (direction === 'right') {
 		let townsToMove = $('#available-towns').find('option:selected');
 		townsToMove.prop('selected', false);
