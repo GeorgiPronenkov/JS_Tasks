@@ -8,7 +8,6 @@ The output should be printed on the console - a single sentence containing all p
 */
 
 function bill(inputArr) {
-
 	let products = inputArr
 				   .filter((product, index) => index % 2 === 1);
 	let price = inputArr
