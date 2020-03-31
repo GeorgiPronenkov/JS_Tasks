@@ -31,7 +31,6 @@
 */
 
 let manager = (function () {
-
     const ingredientObj = {
         protein: 0,
         carbohydrate: 0,

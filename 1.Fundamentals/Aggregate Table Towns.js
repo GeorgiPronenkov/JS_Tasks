@@ -8,7 +8,6 @@ The output is printed on the console on two lines.
 */
 
 function aggregate(inputArr) {
-
 	let sum = 0;
 	let listTowns = [];
 

@@ -23,7 +23,6 @@
 */
 
 function solve(Fundamentals, Advanced, Applications, form) {
-
     //object courses
    const courses = {  //обект
        'JS Fundamentals' : 170,

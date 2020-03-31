@@ -26,7 +26,6 @@ Return the resulting car object as a result of your function. See the examples f
 */
 
 function solve(obj) {
-
 	//wheels
 	let wheels = nearestOddWheelsSize();
 	let [power, volume] = engineInfo();
@@ -47,7 +46,6 @@ function solve(obj) {
 
 
 	function nearestOddWheelsSize() {
-
 		let roundedDown = Math.floor(obj.wheelSize);
 		return roundedDown % 2 !== 0 ? roundedDown : roundedDown - 1;
 	}
@@ -55,7 +53,6 @@ function solve(obj) {
 	//engine
 
 	function engineInfo() {
-
 		let smallEngine = Math.abs(obj.power - 90);
 		let normalEngine = Math.abs(obj.power - 120);
 		let monsterEngine = Math.abs(obj.power - 200);

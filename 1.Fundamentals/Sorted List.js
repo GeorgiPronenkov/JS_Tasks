@@ -1,5 +1,4 @@
 function solve() {
-
 	return {
 		 elements: [],
 		 size: 0,
@@ -25,7 +24,6 @@ function solve() {
 }
 
 function SortedList() {
-
 	this.elements = [];
 	SortedList.prototype.add = function (element) {
 		this.element.push(element);

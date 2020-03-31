@@ -22,7 +22,6 @@
 */
 
 function solve(input) {
-
    let inventory = input.shift().split(' '); // SWORD Shield Spear
    input.forEach((line) => {
        let [ command, equipment ] = line.split(' ');

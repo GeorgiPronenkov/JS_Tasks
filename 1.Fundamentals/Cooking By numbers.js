@@ -12,7 +12,6 @@
 */
 
 function cook(input) {
-
     let number = +input[0]; //идва като стринг и го преобразв. число
     for (let i = 1; i < input.length; i++) { //0-инд е взет , и започваме от 1
         let command = input[i];

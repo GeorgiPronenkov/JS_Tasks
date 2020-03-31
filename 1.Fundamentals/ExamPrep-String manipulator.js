@@ -20,7 +20,6 @@
 */
 
 function solve(input) {
-
   let text = '';
   //command add
   let add = (string) => {

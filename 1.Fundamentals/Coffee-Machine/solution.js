@@ -1,5 +1,4 @@
 function coffeeMachine(input) {
-
     let totalSum = 0;
     for (const tokens of input) {
         

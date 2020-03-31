@@ -1,5 +1,4 @@
 function manageConcert(arr) {
-    
     let addMembers = {};
     let playTime = {};
     let totalTime = 0;

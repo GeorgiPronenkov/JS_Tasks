@@ -1,5 +1,4 @@
 function nthElem(arr) {
-
 	let nth = Number(arr.pop());
 	let res = [];
 	for(let i = 0; i < arr.length; i+=nth) {
