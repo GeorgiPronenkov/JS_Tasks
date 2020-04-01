@@ -13,7 +13,6 @@
 	};
 
 function stopwatch() {
-
 	let startBtn = document.getElementById('startBtn');
 	let stopBtn = document.getElementById('stopBtn');
 	let stopwatch = document.getElementById('time');
@@ -35,7 +34,6 @@ function stopwatch() {
 	});
 
 	function createTime() {
-
 		seconds++;
 		let minutesStr =  ('0' + Math.floor(seconds / 60)).slice(-2);
 		let secondsStr =  ('0' + seconds % 60).slice(-2);

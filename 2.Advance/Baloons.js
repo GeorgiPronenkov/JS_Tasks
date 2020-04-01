@@ -1,5 +1,4 @@
 function solve() {
-
 	 class Balloon {
 		  constructor(color, gasWeight) {
 				this.color = color;
@@ -41,7 +40,6 @@ function Balloon(color, gasWeight) {
 	this.gasWeight = gasWeight;
 }
 function PartyBalloon(color,gasWeight, ribbonColor, ribbonLength) {
-
 	Balloon.call(this, color, gasWeight);
 	this.ribbonColor = ribbonColor;
 	this.ribbonLength = ribbonLength;
@@ -59,7 +57,6 @@ PartyBalloon.prototype = Object.create(Balloon.prototype);
 PartyBalloon.prototype.constructor = PartyBalloon;
 
 function BirthDayBalloon(color,gasWeight, ribbonColor, ribbonLength, text) {
-
 	PartyBalloon.call(this, color,gasWeight, ribbonColor, ribbonLength);
 	this._text = text;
 
