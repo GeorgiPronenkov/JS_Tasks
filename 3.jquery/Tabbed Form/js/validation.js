@@ -1,5 +1,4 @@
 function validateForm() {
-
     for (let i = 0; i < myform.elements.length; i++) {
       if (myForm.elements[i].className === "req" &&
           myForm.elements[i].value.length === 0) {
